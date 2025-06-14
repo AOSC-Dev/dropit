@@ -266,7 +266,7 @@ fi
 
 if [[ -n "$usePkgPrune" ]]; then
     declare pkgPrunePath
-    pkgPrunePath="$(dirname "$(realpath "$0")")/../pkg-prune.rkt"
+    pkgPrunePath="$(dirname "$(realpath "$0")")/pkg-prune.rkt"
     command -v racket &>/dev/null || die "racket is not installed"
     if ! [[ -f "$pkgPrunePath" ]]; then
         die "pkg-prune.rkt is not found at $pkgPrunePath"
